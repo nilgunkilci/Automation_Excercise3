@@ -10,6 +10,8 @@ public abstract class BasePage {
     public BasePage(){
         PageFactory.initElements(Driver.get(),this);  // bu constructor icindeki selenium daki metod cagrisi,
         // web elementleri finelement metodu olmadan kullanmak icin yapiyoruz.
+
+
     }
 
 

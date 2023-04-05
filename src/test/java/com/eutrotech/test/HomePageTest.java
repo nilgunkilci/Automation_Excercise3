@@ -42,5 +42,10 @@ public class HomePageTest extends TestBase {
         driver.get(ConfigurationReader.get("url"));
         homePage.toLogin.click();
        loginPage.login();
+
+
+       //name : Batch7G3
+        // mail : Grup3@gmail.com
+        // password : Grup3
     }
 }
