@@ -14,6 +14,7 @@ public class HomePageTest extends TestBase {
     @Test
     public void homePageTest() {
 
+        // verify that HomePage
         driver.get(ConfigurationReader.get("url"));
 
         String expectedText = "Automation";
@@ -27,25 +28,4 @@ public class HomePageTest extends TestBase {
         homePage.toLogin.click();
     }
 
-    @Test
-    public void verifyLoginPage() {
-        driver.get(ConfigurationReader.get("url"));
-        homePage.toLogin.click();
-        //loginPage.loginText.isDisplayed();
-        String expectedText = "Login to your account";
-        Assert.assertEquals(loginPage.loginText.getText(),expectedText);
-
-    }
-
-    @Test
-    public void toLogin() {
-        driver.get(ConfigurationReader.get("url"));
-        homePage.toLogin.click();
-       loginPage.login();
-
-
-       //name : Batch7G3
-        // mail : Grup3@gmail.com
-        // password : Grup3
-    }
 }

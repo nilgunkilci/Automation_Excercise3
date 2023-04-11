@@ -6,16 +6,27 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public abstract class BasePage {
+    // BasePage. POM a göre, web sitesindeki ortak web elemtlerin depolandigi abstract class dir.
+    // bunun icin her sayfada ortak olan
+    // Home,
+    // Products,
+    // Cart,
+    // Signup/Login,
+    // TestCases,
+    // API Testing,
+    // Video Tutorials,
+    // Contact us
 
     public BasePage(){
-        PageFactory.initElements(Driver.get(),this);  // bu constructor icindeki selenium daki metod cagrisi,
-        // web elementleri finelement metodu olmadan kullanmak icin yapiyoruz.
-
-
+        PageFactory.initElements(Driver.get(),this);
+        // bu constructor icindeki selenium daki metod cagrisi,
+        // web elementleri findelement metodu olmadan kullanmak icin yapiyoruz.
     }
+    @FindBy(xpath = "//i[@class='fa fa-lock']")
+    public WebElement toLogin;
 
 
-    // burada her bir webelementin locatori ni asagidaki sekilde dizayn ediyoruz.
+
 
 
 }
