@@ -1,8 +1,8 @@
 package com.eutrotech.pages;
 
-import com.eutrotech.utilities.ConfigurationReader;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utilities.ConfigurationReader;
 
 public class LoginPage extends BasePage{
     @FindBy(xpath = "//h2[text()='Login to your account']")
