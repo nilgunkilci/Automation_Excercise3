@@ -1,9 +1,8 @@
 package com.eutrotech.pages;
-
-import com.eutrotech.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import utilities.Driver;
 
 public abstract class BasePage {
     // BasePage. POM a göre, web sitesindeki ortak web elemtlerin depolandigi abstract class dir.
@@ -17,16 +16,16 @@ public abstract class BasePage {
     // Video Tutorials,
     // Contact us
 
-    public BasePage(){
+
+    public BasePage() {
+
         PageFactory.initElements(Driver.get(),this);
-        // bu constructor icindeki selenium daki metod cagrisi,
-        // web elementleri findelement metodu olmadan kullanmak icin yapiyoruz.
     }
+    // bu constructor icindeki selenium daki metod cagrisi,
+    // web elementleri findelement metodu olmadan kullanmak icin yapiyoruz.
+
+
     @FindBy(xpath = "//i[@class='fa fa-lock']")
     public WebElement toLogin;
-
-
-
-
 
 }
